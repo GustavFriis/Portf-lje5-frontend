@@ -16,7 +16,25 @@
 <section class="title">
     <h1>VI FUCKING ELSKER CAFER!</h1>
 </section>
-<section class="searchBar"></section>
+<section class="searchBar">
+    <input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >
+    <button class="filter">Søg</button>
+
+    <label for="cozy">Coziness:</label>
+        <select name="Cozy" id="cozy" onchange="getCozyValue();">
+            <option value="cozyLow">Low</option>
+            <option value="cozyMedium">Medium</option>
+            <option value="cozyHigh">High</option>
+        </select>
+
+    <label for="price">Price:</label>
+    <select name="Price" id="price" onchange="getPriceValue()">
+        <option value="priceLow">Low</option>
+        <option value="priceMedium">Medium</option>
+        <option value="priceHigh">High</option>
+    </select>
+    
+</section>
 <section class="box">
     <ul class="cafes"></ul>
 </section>

@@ -1,4 +1,3 @@
-console.log("test")
 fetch('https://cafe-api-jcky.onrender.com/cafes')
     .then(response => response.json())
     .then(function (cafes) {
@@ -21,4 +20,14 @@ function renderCafes(cafes) {
         `;
         ul.appendChild(li);
     });
+}
+
+function getCozyValue(){
+    const selectedCozyValue = document.getElementById("cozy").value;
+    console.log(selectedCozyValue)
+}
+
+function getPriceValue(){
+    const selectedPriceValue = document.getElementById("price").value;
+    console.log(selectedPriceValue)
 }

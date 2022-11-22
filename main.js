@@ -1,12 +1,16 @@
+let cafesGlobal;
+
 fetch('https://cafe-api-jcky.onrender.com/cafes')
     .then(response => response.json())
     .then(function (cafes) {
        renderCafes(cafes)
         console.log(cafes)
+        cafesGlobal = cafes
     });
 
 function renderCafes(cafes) {
     const ul = document.querySelector('ul.cafes')
+    ul.innerHTML = '';
     cafes.forEach(cafes => {
         const li = document.createElement('li')
         li.innerHTML = `
@@ -25,9 +29,18 @@ function renderCafes(cafes) {
 function getCozyValue(){
     const selectedCozyValue = document.getElementById("cozy").value;
     console.log(selectedCozyValue)
-}
+    // vi skal have ændred værdierne i render til at sige cozyLow, cozyMedium og cozyHigh, og lavet loW omtil low i render
+    const filteredCozyFilter = cafesGlobal.filter(cozy => cozy.Cozy === selectedCozyValue)
+    console.log(filteredCozyFilter)
+    renderCafes(filteredCozyFilter)
+    }
+
 
 function getPriceValue(){
     const selectedPriceValue = document.getElementById("price").value;
     console.log(selectedPriceValue)
+    // vi skal have ændred værdierne i render til at sige priceLow, priceMedium og priceHigh
+    const filteredPriceFilter = cafesGlobal.filter(price => price.PriceRange === selectedPriceValue)
+    console.log(filteredPriceFilter)
+    renderCafes(filteredPriceFilter)
 }

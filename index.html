@@ -15,10 +15,11 @@
 <section class="navBar"></section>
 <section class="title">
     <h1>VI FUCKING ELSKER CAFER!</h1>
+    <h2>cafeguiden er her for at hjælpe DIG med at finde det rigtige sted at studere / arbejde.</h2>
 </section>
 <section class="searchBar">
-    <input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >
-    <button class="filter">Søg</button>
+    <!--<input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >-->
+    <!--<button class="filter">Søg</button>-->
 
     <label for="cozy">Coziness:</label>
         <select name="Cozy" id="cozy" oninput="getCozyValue();">
@@ -35,7 +36,8 @@
         <option value="pmedium">Medium</option>
         <option value="phigh">High</option>
     </select>
-    
+
+    <button onclick="renderCafes(cafesGlobal)">Reset Filter</button>
 </section>
 <section class="box">
     <ul class="cafes"></ul>

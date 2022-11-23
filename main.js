@@ -26,7 +26,7 @@ function renderCafes(cafes) {
     });
 }
 
-function getCozyValue(){
+function getCozyValue(cafes){
     const selectedCozyValue = document.getElementById("cozy").value;
     console.log(selectedCozyValue)
     // vi skal have ændred værdierne i render til at sige cozyLow, cozyMedium og cozyHigh, og lavet loW omtil low i render
@@ -36,7 +36,7 @@ function getCozyValue(){
     }
 
 
-function getPriceValue(){
+function getPriceValue(cafes){
     const selectedPriceValue = document.getElementById("price").value;
     console.log(selectedPriceValue)
     // vi skal have ændred værdierne i render til at sige priceLow, priceMedium og priceHigh

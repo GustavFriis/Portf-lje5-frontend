@@ -18,10 +18,10 @@ function renderCafes(cafes) {
         <p>${cafes.CafeName}</p>
         <p>Cozy: ${cafes.Cozy}</p>
         <p>Price: ${cafes.PriceRange}</p>
-        <p>Wifi: ${cafes.Wifi}</p>
+        <p>Wifi:${cafes.Wifi}</p>
         <p>Postnummer: ${cafes.Postcode}</p>
         <p>Addresse: ${cafes.Address}</p>
-        <p>m2: ${cafes.Size}</p>
+        <p>størrelse: ${cafes.Size}m2</p>
         `;
         ul.appendChild(li);
     });

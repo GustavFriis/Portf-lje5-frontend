@@ -33,24 +33,25 @@
 </div>
 
 <section class="searchBar">
+    <div class="bar">
+        <label class="search-function"  for="cozy"> <span> Coziness: </span> </label>
+            <select  class="search-function"  name="Cozy" id="cozy" oninput="getCozyValue();">
+                <option>Select</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
 
-    <label for="cozy">Coziness:</label>
-        <select name="Cozy" id="cozy" oninput="getCozyValue();">
+        <label class="search-function"  for="price"> <span> Price: </span> </label>
+        <select class="search-function"  name="Price" id="price" oninput="getPriceValue()">
             <option>Select</option>
-            <option value="low">Low</option>
+            <option value="loW">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
         </select>
 
-    <label for="price">Price:</label>
-    <select name="Price" id="price" oninput="getPriceValue()">
-        <option>Select</option>
-        <option value="loW">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-    </select>
-
-    <button onclick="renderCafes(cafesGlobal)">Reset Filter</button>
+        <button class="search-function"  onclick="renderCafes(cafesGlobal)">Reset Filter</button>
+    </div>
 </section>
 <section class="box">
     <ul class="cafes"></ul>

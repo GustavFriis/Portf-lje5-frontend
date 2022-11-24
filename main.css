@@ -1,5 +1,5 @@
 body{
-    background-color: #e6ccb2;
+    background-color: #ce4257;
 }
 
 ul.cafes {
@@ -50,7 +50,6 @@ h2{
 }
 .searchBar {
     display: flex;
-    flex-direction: row;
     margin-bottom: 5px;
     margin-top: 40px;
     border-radius: 8px;
@@ -72,7 +71,7 @@ h2{
 }
 
 .topnav {
-    background-color: #ddb892;
+    background-color: #720026;
     overflow: hidden;
     border: black solid;
 }
@@ -94,10 +93,15 @@ h2{
 }
 
 .topnav a.active {
-    background-color: #ddb892;
+    background-color: #ce4257;
     color: #e6ccb2;
 }
 
 .topnav h1{
 color: white;
+}
+
+.search-function
+{
+    margin: 20px;
 }

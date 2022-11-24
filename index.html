@@ -22,12 +22,12 @@
     <!--<button class="filter">Søg</button>-->
 
     <label for="cozy">Coziness:</label>
-        <select name="Cozy" id="cozy" oninput="getCozyValue();">
-            <option>Select</option>
-            <option value="cozyLow">Low</option>
-            <option value="cozyMedium">Medium</option>
-            <option value="cozyHigh">High</option>
-        </select>
+    <select name="Cozy" id="cozy" oninput="getCozyValue();">
+        <option>Select</option>
+        <option value="cozyLow">Low</option>
+        <option value="cozyMedium">Medium</option>
+        <option value="cozyHigh">High</option>
+    </select>
 
     <label for="price">Price:</label>
     <select name="Price" id="price" oninput="getPriceValue()">
@@ -41,6 +41,20 @@
 </section>
 <section class="box">
     <ul class="cafes"></ul>
+</section>
+
+<!--modal tutorial https://www.w3schools.com/howto/howto_css_modals.asp-->
+<button class="addCafeBttn">suggest cafe</button>
+<section id="addCafeModal" class="modal">
+    <section class="addCafe-content">
+        <span class="close">&times;</span>
+        <form>
+            <label for="cafeName">Cafe Name:</label><br>
+            <input type="text" id="cafeName" value="fx mogens cafe"><br>
+            <input type="submit" value="submit">
+        </form>
+    </section>
+
 </section>
 <script src="main.js"></script>
 </body>

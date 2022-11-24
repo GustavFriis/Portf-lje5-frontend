@@ -72,3 +72,5 @@ function filterList (cafes) {
 
 
 
+
+let addCafeModal = document.querySelector('#addCafeModal')

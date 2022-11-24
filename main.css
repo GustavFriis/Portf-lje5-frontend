@@ -34,14 +34,63 @@ h1 {
     color: #000000;
     letter-spacing: 5px;
     font-size: 30px;
+    text-align: center;
+}
+h2{
+    color: #000000;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-align: center;
 }
 .searchBar {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     margin-bottom: 5px;
     margin-top: 40px;
     border-radius: 8px;
     justify-content: center;
-    align-content: space-between;
+    align-content: space-around;
+    align-items: center;
 
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    border-radius: 8px;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+
+}
+
+.topnav {
+    background-color: burlywood;
+    overflow: hidden;
+}
+
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: black;
+    color: white;
+}
+
+.topnav h1{
+color: white;
 }

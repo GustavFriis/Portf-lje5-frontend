@@ -15,12 +15,12 @@ function renderCafes(cafes) {
         const li = document.createElement('li')
         li.innerHTML = `
         <p>${cafes.CafeName}</p>
-        <p>${cafes.Cozy}</p>
-        <p>${cafes.PriceRange}</p>
-        <p>${cafes.Wifi}</p>
-        <p>${cafes.Postcode}</p>
-        <p>${cafes.Address}</p>
-        <p>${cafes.Size}</p>
+        <p>Cozy: ${cafes.Cozy}</p>
+        <p>Price: ${cafes.PriceRange}</p>
+        <p>Wifi: ${cafes.Wifi}</p>
+        <p>Postnummer: ${cafes.Postcode}</p>
+        <p>Addresse: ${cafes.Address}</p>
+        <p>m2: ${cafes.Size}</p>
         `;
         ul.appendChild(li);
     });

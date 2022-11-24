@@ -12,14 +12,27 @@
     <title>Cafeguiden</title>
 </head>
 <body>
-<section class="navBar"></section>
+<section class="navBar">
+
+    <div class="topnav">
+       <a class="active"> <h1>Cafeguiden</h1> </a>
+        <a href="#home">Home</a>
+        <a href="#OmOs">Om os</a>
+        <a href="#Faq">Faq</a>
+        <a href="#Kontakt">Kontakt</a>
+    </div>
+
+</section>
 <section class="title">
     <h1>VI FUCKING ELSKER CAFER!</h1>
-    <h2>cafeguiden er her for at hjælpe DIG med at finde det rigtige sted at studere / arbejde.</h2>
+    <h2>Cafeguiden er her for at hjælpe DIG med at finde det rigtige sted at studere / arbejde.</h2>
 </section>
+<div class="search">
+    <input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text">
+    <button class="filter">Søg</button>
+</div>
+
 <section class="searchBar">
-    <!--<input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >-->
-    <!--<button class="filter">Søg</button>-->
 
     <label for="cozy">Coziness:</label>
         <select name="Cozy" id="cozy" oninput="getCozyValue();">

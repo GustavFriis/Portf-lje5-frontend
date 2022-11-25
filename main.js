@@ -70,7 +70,31 @@ function filterList (cafes) {
     })
 }
 
+function addCafe(event) {
+    event.preventDefault()
+    const cafe = {
+        CafeName: event.target.CafeName.value,
+        Cozy: event.target.Cozy.value,
+        PriceRange: event.target.PriceRange.value,
+        Wifi: event.target.Wifi.value,
+        PostCode: event.target.PostCode.value,
+        Address: event.target.Address.value,
+        Size: event.target.Size.value
+    };
+    console.log(cafe)
+    fetch('https://cafe-api-jcky.onrender.com/cafes/add/', {
+        method: 'POST',
+        body: JSON.stringify(cafe),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then((response) => response.json())
+        .then(function (Success) {
+            console.log(Success)
+        })
 
+}
 
 
 let addCafeModal = document.querySelector('#addCafeModal')

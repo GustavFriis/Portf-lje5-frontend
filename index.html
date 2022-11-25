@@ -18,8 +18,8 @@
     <h2>cafeguiden er her for at hjælpe DIG med at finde det rigtige sted at studere / arbejde.</h2>
 </section>
 <section class="searchBar">
-    <!--<input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >-->
-    <!--<button class="filter">Søg</button>-->
+    <input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >
+    <button class="filter">Søg</button>
 
     <label for="cozy">Coziness:</label>
     <select name="Cozy" id="cozy" oninput="getCozyValue();">
@@ -48,9 +48,9 @@
 <section id="addCafeModal">
     <section class="addCafe-content">
         <span class="close">&times;</span>
-        <form>
+        <form onsubmit="addCafe(event)">
             <label for="CafeName">Cafe Name:</label><br>
-            <input type="text" id="CafeName" value="fx. mogens cafe"><br>
+            <input type="text" id="CafeName" name="CafeName" value="fx. mogens cafe"><br>
             <label for="Cozy">Cozyness:</label><br>
             <select name="Cozy" id="cozyForm">
                 <option value="cozyHigh">High</option>
@@ -63,17 +63,17 @@
                 <option value="priceMedium">Medium</option>
                 <option value="priceLow">Low</option>
             </select><br>
-            <label for="WiFi">WiFi</label><br>
-            <select name="WiFi" id="WiFi">
+            <label for="Wifi">WiFi</label><br>
+            <select name="Wifi" id="Wifi">
                 <option value="1">Ja</option>
                 <option value="0">Nej</option>
             </select><br>
             <label for="PostCode">postnummer:</label><br>
-            <input type="text" id="PostCode" value="fx. 2000"><br>
+            <input type="text" id="PostCode" name="PostCode" value="fx. 2000"><br>
             <label for="Address">Addresse:</label><br>
-            <input type="text" id="Address" value="fx. Stenløbsgade 45"><br>
+            <input type="text" id="Address" name="Address" value="fx. Stenløbsgade 45"><br>
             <label for="Size">Størrelse:</label><br>
-            <input type="text" id="Size" value="fx. 85m2"><br>
+            <input type="text" id="Size" name="Size" value="fx. 85m2"><br>
 
             <br><br>
             <input type="submit" value="submit">

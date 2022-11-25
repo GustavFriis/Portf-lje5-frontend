@@ -45,12 +45,37 @@
 
 <!--modal tutorial https://www.w3schools.com/howto/howto_css_modals.asp-->
 <button class="addCafeBttn">suggest cafe</button>
-<section id="addCafeModal" class="modal">
+<section id="addCafeModal">
     <section class="addCafe-content">
         <span class="close">&times;</span>
         <form>
-            <label for="cafeName">Cafe Name:</label><br>
-            <input type="text" id="cafeName" value="fx mogens cafe"><br>
+            <label for="CafeName">Cafe Name:</label><br>
+            <input type="text" id="CafeName" value="fx. mogens cafe"><br>
+            <label for="Cozy">Cozyness:</label><br>
+            <select name="Cozy" id="cozyForm">
+                <option value="cozyHigh">High</option>
+                <option value="cozyMedium">Medium</option>
+                <option value="cozyLow">Low</option>
+            </select><br>
+            <label for="PriceRange">Price Range</label><br>
+            <select name="PriceRange" id="PriceRange">
+                <option value="priceHigh">High</option>
+                <option value="priceMedium">Medium</option>
+                <option value="priceLow">Low</option>
+            </select><br>
+            <label for="WiFi">WiFi</label><br>
+            <select name="WiFi" id="WiFi">
+                <option value="1">Ja</option>
+                <option value="0">Nej</option>
+            </select><br>
+            <label for="PostCode">postnummer:</label><br>
+            <input type="text" id="PostCode" value="fx. 2000"><br>
+            <label for="Address">Addresse:</label><br>
+            <input type="text" id="Address" value="fx. Stenløbsgade 45"><br>
+            <label for="Size">Størrelse:</label><br>
+            <input type="text" id="Size" value="fx. 85m2"><br>
+
+            <br><br>
             <input type="submit" value="submit">
         </form>
     </section>

@@ -74,3 +74,15 @@ function filterList (cafes) {
 
 
 let addCafeModal = document.querySelector('#addCafeModal')
+let addCafeBttn = document.querySelector('.addCafeBttn')
+let span = document.querySelector('.close')
+
+addCafeModal.style.display = "none";
+addCafeBttn.onclick = function () {
+    addCafeModal.style.display = "block";
+}
+
+span.onclick = function () {
+    addCafeModal.style.display = "none";
+}
+

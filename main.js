@@ -68,6 +68,7 @@ function filterList(cafes) {
     })
 }
 
+//
 function addCafe(event) {
     event.preventDefault()
     const cafe = {

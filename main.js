@@ -16,13 +16,13 @@ function renderCafes(cafes) {
     cafes.forEach(cafes => {
         const li = document.createElement('li')
         li.innerHTML = `
-        <p>${cafes.CafeName}</p>
+        <p class="cafeTitle">${cafes.CafeName}</p>
         <p>Cozy: ${cafes.Cozy}</p>
         <p>Price: ${cafes.PriceRange}</p>
         <p>Wifi:${cafes.Wifi}</p>
         <p>Postnummer: ${cafes.Postcode}</p>
         <p>Addresse: ${cafes.Address}</p>
-        <p>størrelse: ${cafes.Size}m2</p>
+        <p>Størrelse: ${cafes.Size}m2</p>
         `;
         ul.appendChild(li);
     });

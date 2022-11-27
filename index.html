@@ -8,34 +8,38 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito&display=swap" rel="stylesheet">
 
     <title>Cafeguiden</title>
 </head>
 <body>
 <section class="title">
-    <h1>VI FUCKING ELSKER CAFER!</h1>
-    <h2>cafeguiden er her for at hjælpe DIG med at finde det rigtige sted at studere / arbejde.</h2>
+    <h1>VI FUCKING ELSKER CAFÉER!</h1>
+    <h2>caféguiden er her for at hjælpe DIG med at finde det rigtige sted at studere / arbejde.</h2>
 </section>
 <section class="searchBar">
-    <input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text" >
-    <button class="filter">Søg</button>
-
-    <label for="cozy">Coziness:</label>
-    <select name="Cozy" id="cozy" oninput="getCozyValue();">
-        <option>Select</option>
-        <option value="cozyLow">Low</option>
-        <option value="cozyMedium">Medium</option>
-        <option value="cozyHigh">High</option>
-    </select>
-
-    <label for="price">Price:</label>
-    <select name="Price" id="price" oninput="getPriceValue()">
-        <option>Select</option>
-        <option value="priceLow">Low</option>
-        <option value="priceMedium">Medium</option>
-        <option value="priceHigh">High</option>
-    </select>
-
+    <section class="cozyFilter">
+        <input id="searchBarID" class="searchBarInput" placeholder="Søg efter cafeer" type="text">
+        <button class="filter">Søg</button>
+    </section>
+    <section>
+        <label for="cozy">Coziness:</label>
+        <select name="Cozy" id="cozy" oninput="getCozyValue();">
+            <option>Select</option>
+            <option value="cozyLow">Low</option>
+            <option value="cozyMedium">Medium</option>
+            <option value="cozyHigh">High</option>
+        </select>
+    </section>
+    <section class="priceFilter" >
+        <label for="price">Price:</label>
+        <select name="Price" id="price" oninput="getPriceValue()">
+            <option>Select</option>
+            <option value="priceLow">Low</option>
+            <option value="priceMedium">Medium</option>
+            <option value="priceHigh">High</option>
+        </select>
+    </section>
     <button onclick="renderCafes(cafesGlobal)">Reset Filter</button>
 </section>
 <section class="box">
@@ -43,7 +47,7 @@
 </section>
 
 <!--modal tutorial https://www.w3schools.com/howto/howto_css_modals.asp-->
-<button class="addCafeBttn">suggest cafe</button>
+<button class="addCafeBttn">anbefal cafe</button>
 <section id="addCafeModal">
     <section class="addCafe-content">
         <span class="close">&times;</span>
@@ -71,8 +75,8 @@
             <input type="text" id="Postcode" name="Postcode" value="fx. 2000"><br>
             <label for="Address">Addresse:</label><br>
             <input type="text" id="Address" name="Address" value="fx. Stenløbsgade 45"><br>
-            <label for="Size">Størrelse:</label><br>
-            <input type="text" id="Size" name="Size" value="fx. 85m2"><br>
+            <label for="Size">Størrelse i m2:</label><br>
+            <input type="text" id="Size" name="Size" value="85"><br>
 
             <br><br>
             <input type="submit" value="submit">

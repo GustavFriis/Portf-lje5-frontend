@@ -94,7 +94,6 @@ function addCafe(event) {
         .then(function (Success) {
             console.log(Success)
         })
-
 }
 
 

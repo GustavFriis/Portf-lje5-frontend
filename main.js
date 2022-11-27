@@ -7,6 +7,7 @@ fetch('https://cafe-api-jcky.onrender.com/cafes')
         console.log(cafes)
         cafesGlobal = cafes
         filterList(cafes)
+
     });
 
 function renderCafes(cafes) {
@@ -74,19 +75,20 @@ function addCafe(event) {
         Cozy: event.target.Cozy.value,
         PriceRange: event.target.PriceRange.value,
         Wifi: event.target.Wifi.value,
-        PostCode: event.target.PostCode.value,
+        Postcode: event.target.Postcode.value,
         Address: event.target.Address.value,
         Size: event.target.Size.value
     };
     console.log(cafe)
     console.log(JSON.stringify(cafe))
-    fetch('https://cafe-api-jcky.onrender.com/cafes/add/', {
+
+    fetch('https://cafe-api-jcky.onrender.com/cafes/', {
         method: 'POST',
-        mode: "cors",
+        body: JSON.stringify(cafe),
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(cafe)
+
     })
         .then((response) => response.json())
         .then(function (Success) {

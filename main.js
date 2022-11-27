@@ -3,7 +3,7 @@ let cafesGlobal;
 fetch('https://cafe-api-jcky.onrender.com/cafes')
     .then(response => response.json())
     .then(function (cafes) {
-       renderCafes(cafes)
+        renderCafes(cafes)
         console.log(cafes)
         cafesGlobal = cafes
         filterList(cafes)
@@ -27,30 +27,27 @@ function renderCafes(cafes) {
     });
 }
 
-function getCozyValue(cafes){
+function getCozyValue(cafes) {
 
     const selectedCozyValue = document.getElementById("cozy").value;
     console.log(selectedCozyValue)
-    // vi skal have ændred værdierne i render til at sige cozyLow, cozyMedium og cozyHigh, og lavet loW omtil low i render
     const filteredCozyFilter = cafesGlobal.filter(cozy => cozy.Cozy === selectedCozyValue)
     console.log(filteredCozyFilter)
     renderCafes(filteredCozyFilter)
-    }
+}
 
 
-function getPriceValue(cafes){
+function getPriceValue(cafes) {
     debugger;
     const selectedPriceValue = document.getElementById("price").value;
     console.log(selectedPriceValue)
-    // vi skal have ændred værdierne i render til at sige priceLow, priceMedium og priceHigh
     const filteredPriceFilter = cafesGlobal.filter(price => price.PriceRange === selectedPriceValue)
     console.log(filteredPriceFilter)
     renderCafes(filteredPriceFilter)
 }
 
 
-
-function filterList (cafes) {
+function filterList(cafes) {
     console.log(cafes)
     const textInput = document.querySelector('input#searchBarID');
     textInput.addEventListener("input", function () {
@@ -61,7 +58,7 @@ function filterList (cafes) {
         for (let i = 0; i < cafesGlobal.length; i++) {
             const newCafe = cafesGlobal[i]
             console.log(newCafe.CafeName)
-            if (newCafe.CafeName.toLowerCase().includes(inputValue)){
+            if (newCafe.CafeName.toLowerCase().includes(inputValue)) {
                 filteredCafes.push(newCafe)
             }
         }
@@ -82,12 +79,14 @@ function addCafe(event) {
         Size: event.target.Size.value
     };
     console.log(cafe)
+    console.log(JSON.stringify(cafe))
     fetch('https://cafe-api-jcky.onrender.com/cafes/add/', {
         method: 'POST',
-        body: JSON.stringify(cafe),
+        mode: "cors",
         headers: {
-            "Content-Type": "application/json"
-        }
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cafe)
     })
         .then((response) => response.json())
         .then(function (Success) {
